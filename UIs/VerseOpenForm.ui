@@ -73,7 +73,11 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QTextBrowser" name="verseText"/>
+      <widget class="QTextBrowser" name="verseText">
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOn</enum>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
