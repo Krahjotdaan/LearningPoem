@@ -10,4 +10,3 @@ def quatrains(text):
             
     except IndexError:
         pass
-
