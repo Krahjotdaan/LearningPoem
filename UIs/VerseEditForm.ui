@@ -17,10 +17,10 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>171</width>
-      <height>51</height>
+      <x>21</x>
+      <y>50</y>
+      <width>121</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -36,10 +36,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>199</x>
-      <y>60</y>
-      <width>201</width>
-      <height>51</height>
+      <x>150</x>
+      <y>50</y>
+      <width>251</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -57,10 +57,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>120</y>
-      <width>171</width>
-      <height>51</height>
+      <x>21</x>
+      <y>100</y>
+      <width>121</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -76,10 +76,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_4">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>120</y>
-      <width>201</width>
-      <height>51</height>
+      <x>151</x>
+      <y>100</y>
+      <width>251</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -97,17 +97,17 @@
    <widget class="QWidget" name="verticalLayoutWidget_5">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>180</y>
-      <width>176</width>
-      <height>51</height>
+      <x>21</x>
+      <y>150</y>
+      <width>121</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_5">
      <item>
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Год написания:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Год:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
@@ -116,10 +116,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_6">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>180</y>
-      <width>201</width>
-      <height>51</height>
+      <x>151</x>
+      <y>150</y>
+      <width>251</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -138,9 +138,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>300</y>
+      <y>250</y>
       <width>381</width>
-      <height>321</height>
+      <height>371</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -148,7 +148,7 @@
       <widget class="QTextEdit" name="verse_text">
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>14</pointsize>
         </font>
        </property>
        <property name="verticalScrollBarPolicy">
@@ -161,10 +161,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_8">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>240</y>
-      <width>201</width>
-      <height>51</height>
+      <x>151</x>
+      <y>200</y>
+      <width>251</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -182,10 +182,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_9">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>240</y>
-      <width>171</width>
-      <height>51</height>
+      <x>21</x>
+      <y>200</y>
+      <width>121</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_11">
