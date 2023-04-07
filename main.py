@@ -1,12 +1,12 @@
 from PyQt5 import QtWidgets
-from converted_uis import MainWindow
+from converted_uis.MainWindow import *
 import sys
 
 def main():       
     class mainWindow(QtWidgets.QMainWindow):
         def __init__(self):
             super(mainWindow, self).__init__()
-            self.ui = MainWindow()
+            self.ui = Ui_MainWindow()
             self.ui.setupUi(self)
     
     
