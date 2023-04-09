@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>420</width>
-    <height>700</height>
+    <height>709</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>0</y>
+      <y>10</y>
       <width>341</width>
       <height>51</height>
      </rect>
@@ -32,31 +32,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Название и автор</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>401</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLabel" name="yearAndVerseSizeLabel">
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Год создания и размер стиха</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Название и автор&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
@@ -66,9 +42,9 @@
     <property name="geometry">
      <rect>
       <x>9</x>
-      <y>229</y>
+      <y>199</y>
       <width>401</width>
-      <height>461</height>
+      <height>491</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -85,7 +61,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>100</y>
+      <y>70</y>
       <width>201</width>
       <height>41</height>
      </rect>
@@ -118,7 +94,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>100</y>
+      <y>70</y>
       <width>201</width>
       <height>41</height>
      </rect>
@@ -142,7 +118,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>140</y>
+      <y>110</y>
       <width>201</width>
       <height>41</height>
      </rect>
@@ -166,7 +142,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>180</y>
+      <y>150</y>
       <width>201</width>
       <height>41</height>
      </rect>
@@ -190,7 +166,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>140</y>
+      <y>110</y>
       <width>201</width>
       <height>41</height>
      </rect>
@@ -214,7 +190,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>180</y>
+      <y>150</y>
       <width>201</width>
       <height>41</height>
      </rect>
@@ -238,7 +214,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
+      <y>10</y>
       <width>51</width>
       <height>51</height>
      </rect>

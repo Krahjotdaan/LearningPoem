@@ -11,7 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
+class Ui_MethodologyForm(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(420, 700)
@@ -84,7 +84,7 @@ class Ui_MainWindow(object):
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">Чтобы добавить стих, в главном меню перейти во вкладку &quot;Новый стих&quot;, в появившуюся форму внести необходимую информацию и нажать на кнопку &quot;Добавить&quot;. </span></p>\n"
 "<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt;\"><br /></p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Библиотека </span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">В библиотеке находятся все созданные стихи,для которых доступны функции чтения, редактирования и удаления. Надо выделить строку с названием стиха, а затем выбрать нужную функцию.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">В библиотеке находятся все созданные стихи, для которых доступны функции чтения, редактирования и удаления. Надо выделить строку с названием стиха, а затем выбрать нужную функцию.</span></p>\n"
 "<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt;\"><br /></p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Работа с текстом</span></p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">При выборе из библиотеки стиха и функции &quot;Открыть&quot; отобразится форма, в которой появятся информация о стихотворении, методы работы с текстом и сам текст. Выбор метода &quot;Первое слово&quot; отобразит первые слова каждой строки, метод &quot;Строки&quot; с внесением в соответствующее поле через пробел чисел от 1 до 4 отобразит в каждом четверостишье строки с указанными номерами, метод &quot;Четверостишья&quot; с внесением в соответствующее поле через пробел их номеров отобразит соответствующие четверостишья, метод &quot;Исходный&quot; вернёт текст к первоначальному состоянию.</span></p></body></html>"))
