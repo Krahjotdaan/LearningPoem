@@ -158,7 +158,8 @@ class Ui_MainWindow(object):
         self.imageLabel = QtWidgets.QLabel(self.horizontalLayoutWidget_6)
         self.imageLabel.setText("")
         self.imageLabel.setObjectName("imageLabel")
-        self.imageLabel.setPixmap(QtGui.QPixmap("converted_uis/../resource/logo.png"))
+        self.imageLabel.setPixmap(QtGui.QPixmap("converted_uis/../resource/logo1.png"))
+        self.imageLabel.resize(QtCore.QSize(419, 229))
 
         MainWindow.setCentralWidget(self.centralwidget)
 

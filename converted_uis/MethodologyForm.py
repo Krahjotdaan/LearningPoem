@@ -65,6 +65,12 @@ class Ui_MethodologyForm(object):
         self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout.addWidget(self.textBrowser)
+        self.icon = QtGui.QIcon()
+        self.icon.addPixmap(QtGui.QPixmap(
+            "converted_uis/../resource/back.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.backButton.setIcon(self.icon)
+        self.backButton.setIconSize(QtCore.QSize(45, 45))
+
         MethodologyForm.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MethodologyForm)

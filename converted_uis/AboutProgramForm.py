@@ -125,6 +125,9 @@ class Ui_AboutProgramForm(object):
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_6.addWidget(self.label_3)
         AboutProgramForm.setCentralWidget(self.centralwidget)
+        self.imageLabel.setPixmap(QtGui.QPixmap(
+            "converted_uis/../resource/logo1.png"))
+        self.imageLabel.resize(QtCore.QSize(419, 229))
 
         self.retranslateUi(AboutProgramForm)
         QtCore.QMetaObject.connectSlotsByName(AboutProgramForm)

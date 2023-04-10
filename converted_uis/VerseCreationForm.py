@@ -116,6 +116,11 @@ class Ui_VerseCreationForm(object):
         self.backButton.setText("")
         self.backButton.setObjectName("backButton")
         self.horizontalLayout_9.addWidget(self.backButton)
+        self.icon = QtGui.QIcon()
+        self.icon.addPixmap(QtGui.QPixmap(
+            "converted_uis/../resource/back.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.backButton.setIcon(self.icon)
+        self.backButton.setIconSize(QtCore.QSize(45, 45))
         VerseCreationForm.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(VerseCreationForm)
