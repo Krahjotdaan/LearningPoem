@@ -139,6 +139,8 @@ class Ui_LibraryForm(object):
         self.retranslateUi(LibraryForm)
         QtCore.QMetaObject.connectSlotsByName(LibraryForm)
 
+        self.backButton.clicked.connect(LibraryForm.back_button_clicked)
+
     def retranslateUi(self, LibraryForm):
         _translate = QtCore.QCoreApplication.translate
         LibraryForm.setWindowTitle(_translate("LibraryForm", "MainWindow"))

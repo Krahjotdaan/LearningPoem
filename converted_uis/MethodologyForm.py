@@ -12,13 +12,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MethodologyForm(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(420, 700)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+    def setupUi(self, MethodologyForm):
+        MethodologyForm.setObjectName("MethodologyForm")
+        MethodologyForm.resize(420, 700)
+        self.centralwidget = QtWidgets.QWidget(MethodologyForm)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayoutWidget_5 = QtWidgets.QWidget(self.centralwidget)
-        self.horizontalLayoutWidget_5.setGeometry(QtCore.QRect(70, 0, 341, 51))
+        self.horizontalLayoutWidget_5.setGeometry(QtCore.QRect(70, 10, 341, 51))
         self.horizontalLayoutWidget_5.setObjectName("horizontalLayoutWidget_5")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_5)
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
@@ -30,7 +30,7 @@ class Ui_MethodologyForm(object):
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_5.addWidget(self.label_3)
         self.horizontalLayoutWidget_10 = QtWidgets.QWidget(self.centralwidget)
-        self.horizontalLayoutWidget_10.setGeometry(QtCore.QRect(10, 0, 51, 51))
+        self.horizontalLayoutWidget_10.setGeometry(QtCore.QRect(10, 10, 51, 51))
         self.horizontalLayoutWidget_10.setObjectName("horizontalLayoutWidget_10")
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_10)
         self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
@@ -45,7 +45,7 @@ class Ui_MethodologyForm(object):
         self.backButton.setObjectName("backButton")
         self.horizontalLayout_10.addWidget(self.backButton)
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 60, 401, 631))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 70, 401, 621))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -65,16 +65,18 @@ class Ui_MethodologyForm(object):
         self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout.addWidget(self.textBrowser)
-        MainWindow.setCentralWidget(self.centralwidget)
+        MethodologyForm.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(MethodologyForm)
+        QtCore.QMetaObject.connectSlotsByName(MethodologyForm)
 
-    def retranslateUi(self, MainWindow):
+        self.backButton.clicked.connect(MethodologyForm.back_button_clicked)
+
+    def retranslateUi(self, MethodologyForm):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_3.setText(_translate("MainWindow", "Методика"))
-        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        MethodologyForm.setWindowTitle(_translate("MethodologyForm", "MainWindow"))
+        self.label_3.setText(_translate("MethodologyForm", "Методика"))
+        self.textBrowser.setHtml(_translate("MethodologyForm", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"

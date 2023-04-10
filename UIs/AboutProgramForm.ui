@@ -26,8 +26,17 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="imageLabel">
+       <property name="maximumSize">
+        <size>
+         <width>419</width>
+         <height>229</height>
+        </size>
+       </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../resource/logo.png</pixmap>
        </property>
       </widget>
      </item>

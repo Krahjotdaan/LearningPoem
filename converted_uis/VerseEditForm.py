@@ -121,6 +121,8 @@ class Ui_VerseEditForm(object):
         self.retranslateUi(VerseEditForm)
         QtCore.QMetaObject.connectSlotsByName(VerseEditForm)
 
+        self.backButton.clicked.connect(VerseEditForm.back_button_clicked)
+
     def retranslateUi(self, VerseEditForm):
         _translate = QtCore.QCoreApplication.translate
         VerseEditForm.setWindowTitle(_translate("VerseEditForm", "MainWindow"))

@@ -25,6 +25,7 @@ class Ui_AboutProgramForm(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.imageLabel = QtWidgets.QLabel(self.horizontalLayoutWidget)
         self.imageLabel.setText("")
+        self.imageLabel.setPixmap(QtGui.QPixmap("converted_uis/../resource/logo.png"))
         self.imageLabel.setObjectName("imageLabel")
         self.horizontalLayout.addWidget(self.imageLabel)
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
@@ -127,6 +128,8 @@ class Ui_AboutProgramForm(object):
 
         self.retranslateUi(AboutProgramForm)
         QtCore.QMetaObject.connectSlotsByName(AboutProgramForm)
+
+        self.backButton.clicked.connect(AboutProgramForm.back_button_clicked)
 
     def retranslateUi(self, AboutProgramForm):
         _translate = QtCore.QCoreApplication.translate

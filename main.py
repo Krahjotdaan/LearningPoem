@@ -14,6 +14,8 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        #self.imageLabel = QtWidgets.QLabel(self)
+        #self.imageLabel.setPixmap(QtGui.QPixmap("resource/logo.png"))
 
     def new_verse_button_clicked(self):
         self.close()
@@ -48,6 +50,12 @@ class VerseCreationWindow(QtWidgets.QMainWindow):
         super(VerseCreationWindow, self).__init__()
         self.ui = Ui_VerseCreationForm()
         self.ui.setupUi(self)
+
+    def back_button_clicked(self):
+        self.close()
+        self.mainWindow = MainWindow()
+        self.mainWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+        self.mainWindow.show()
         
 
 class VerseEditWindow(QtWidgets.QMainWindow):
@@ -56,12 +64,24 @@ class VerseEditWindow(QtWidgets.QMainWindow):
         self.ui = Ui_VerseEditForm()
         self.ui.setupUi(self)
 
+    def back_button_clicked(self):
+        self.close()
+        self.mainWindow = MainWindow()
+        self.mainWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+        self.mainWindow.show()
+
 
 class VerseOpenWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(VerseOpenWindow, self).__init__()
         self.ui = Ui_VerseOpenForm()
         self.ui.setupUi(self)
+
+    def back_button_clicked(self):
+        self.close()
+        self.mainWindow = MainWindow()
+        self.mainWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+        self.mainWindow.show()
 
 
 class LibraryWindow(QtWidgets.QMainWindow):
@@ -70,6 +90,12 @@ class LibraryWindow(QtWidgets.QMainWindow):
         self.ui = Ui_LibraryForm()
         self.ui.setupUi(self)
 
+    def back_button_clicked(self):
+        self.close()
+        self.mainWindow = MainWindow()
+        self.mainWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+        self.mainWindow.show()
+
 
 class MethodologyWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -77,12 +103,24 @@ class MethodologyWindow(QtWidgets.QMainWindow):
         self.ui = Ui_MethodologyForm()
         self.ui.setupUi(self)
 
+    def back_button_clicked(self):
+        self.close()
+        self.mainWindow = MainWindow()
+        self.mainWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+        self.mainWindow.show()
+
 
 class AboutProgramWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(AboutProgramWindow, self).__init__()
         self.ui = Ui_AboutProgramForm()
         self.ui.setupUi(self)
+
+    def back_button_clicked(self):
+        self.close()
+        self.mainWindow = MainWindow()
+        self.mainWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+        self.mainWindow.show()
 
 
 def main():       

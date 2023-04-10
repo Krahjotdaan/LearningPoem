@@ -139,6 +139,8 @@ class Ui_VerseOpenForm(object):
         self.retranslateUi(VerseOpenForm)
         QtCore.QMetaObject.connectSlotsByName(VerseOpenForm)
 
+        self.backButton.clicked.connect(VerseOpenForm.back_button_clicked)
+
     def retranslateUi(self, VerseOpenForm):
         _translate = QtCore.QCoreApplication.translate
         VerseOpenForm.setWindowTitle(_translate("VerseOpenForm", "MainWindow"))
