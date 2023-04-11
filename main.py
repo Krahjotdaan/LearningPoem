@@ -97,6 +97,21 @@ class LibraryWindow(QtWidgets.QMainWindow):
         self.ui = Ui_LibraryForm()
         self.ui.setupUi(self)
 
+    def open_button_clicked(self):
+        self.close()
+        self.verseOpenWindow = VerseOpenWindow()
+        self.verseOpenWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+        self.verseOpenWindow.show()
+
+    def edit_button_clicked(self):
+        self.close()
+        self.verseEditWindow = VerseEditWindow()
+        self.verseEditWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+        self.verseEditWindow.show()
+
+    def delete_button_clicked(self):
+        pass
+
     def back_button_clicked(self):
         self.close()
         self.mainWindow = MainWindow()

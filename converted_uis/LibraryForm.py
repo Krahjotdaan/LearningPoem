@@ -144,6 +144,9 @@ class Ui_LibraryForm(object):
         self.retranslateUi(LibraryForm)
         QtCore.QMetaObject.connectSlotsByName(LibraryForm)
 
+        self.openButton.clicked.connect(LibraryForm.open_button_clicked)
+        self.editButton.clicked.connect(LibraryForm.edit_button_clicked)
+        self.deleteButton.clicked.connect(LibraryForm.delete_button_clicked)
         self.backButton.clicked.connect(LibraryForm.back_button_clicked)
 
     def retranslateUi(self, LibraryForm):
