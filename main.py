@@ -14,8 +14,6 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        #self.imageLabel = QtWidgets.QLabel(self)
-        #self.imageLabel.setPixmap(QtGui.QPixmap("resource/logo.png"))
 
     def new_verse_button_clicked(self):
         self.close()
@@ -50,6 +48,15 @@ class VerseCreationWindow(QtWidgets.QMainWindow):
         super(VerseCreationWindow, self).__init__()
         self.ui = Ui_VerseCreationForm()
         self.ui.setupUi(self)
+
+    def add_verse_button_clicked(self):
+        fileTitle = str(self.ui.title.text()) + ' ' + str(self.ui.author.text())
+        with open(f"verses/{fileTitle}.txt", "w") as fl:
+            fl.write(self.ui.verse_text.toPlainText())
+
+        self.ui.title.setText("")
+        self.ui.author.setText("")
+        self.ui.verse_text.setText("")
 
     def back_button_clicked(self):
         self.close()

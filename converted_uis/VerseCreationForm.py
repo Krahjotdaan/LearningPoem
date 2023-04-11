@@ -67,7 +67,7 @@ class Ui_VerseCreationForm(object):
         self.verticalLayout_7.setObjectName("verticalLayout_7")
         self.verse_text = QtWidgets.QTextEdit(self.verticalLayoutWidget_7)
         font = QtGui.QFont()
-        font.setPointSize(16)
+        font.setPointSize(12)
         self.verse_text.setFont(font)
         self.verse_text.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOn)
         self.verse_text.setObjectName("verse_text")
@@ -127,6 +127,7 @@ class Ui_VerseCreationForm(object):
         QtCore.QMetaObject.connectSlotsByName(VerseCreationForm)
 
         self.backButton.clicked.connect(VerseCreationForm.back_button_clicked)
+        self.newVerseButton.clicked.connect(VerseCreationForm.add_verse_button_clicked)
 
     def retranslateUi(self, VerseCreationForm):
         _translate = QtCore.QCoreApplication.translate
