@@ -50,13 +50,15 @@ class VerseCreationWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
     def add_verse_button_clicked(self):
-        fileTitle = str(self.ui.title.text()) + ' ' + str(self.ui.author.text())
-        with open(f"verses/{fileTitle}.txt", "w") as fl:
-            fl.write(self.ui.verse_text.toPlainText())
+        if self.ui.title.text() is not None and self.ui.author.text() is not None \
+            and self.ui.verse_text.toPlainText() is not None:
+            fileTitle = str(self.ui.title.text()) + ', ' + str(self.ui.author.text())
+            with open(f"verses/{fileTitle}.txt", "w") as fl:
+                fl.write(self.ui.verse_text.toPlainText())
 
-        self.ui.title.setText("")
-        self.ui.author.setText("")
-        self.ui.verse_text.setText("")
+            self.ui.title.setText("")
+            self.ui.author.setText("")
+            self.ui.verse_text.setText("")
 
     def back_button_clicked(self):
         self.close()
@@ -98,10 +100,28 @@ class LibraryWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
     def open_button_clicked(self):
-        self.close()
-        self.verseOpenWindow = VerseOpenWindow()
-        self.verseOpenWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
-        self.verseOpenWindow.show()
+        for verse in self.ui.verses:
+            if verse.isChecked() is True:
+                self.close()
+                self.verseOpenWindow = VerseOpenWindow()
+                self.verseOpenWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)             
+                with open(f"verses/{verse.text()}.txt", "r") as fl:
+                    versetext = fl.read()
+                
+                versetext = list(filter(None, versetext.split('\n')))
+                vrstxt = ""
+                for i in range(len(versetext)):
+                    vrstxt += str(versetext[i])
+                    vrstxt += '\n'
+                    if (i + 1) % 4 == 0 and i != 0:
+                        vrstxt += '\n'
+
+                self.verseOpenWindow.ui.titleAndAuthorLabel.setText(verse.text())
+                self.verseOpenWindow.ui.verseText.setText(vrstxt)
+                self.verseOpenWindow.show()
+                
+
+                
 
     def edit_button_clicked(self):
         self.close()
@@ -150,7 +170,7 @@ def main():
     application = MainWindow()
     application.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
     application.show()
-    
+
     sys.exit(app.exec())
 
 
