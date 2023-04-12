@@ -162,7 +162,12 @@ class LibraryWindow(QtWidgets.QMainWindow):
                 self.verseEditWindow.show()
 
     def delete_button_clicked(self):
-        pass
+        for verse in self.ui.verses:
+            if verse.isChecked() is True:
+                os.remove(f"verses/{verse.text()}.txt")
+                self.ui.verses.remove(verse)
+                self.ui.vbox.removeWidget(verse)
+                self.ui.vbox.update()
 
     def back_button_clicked(self):
         self.close()
