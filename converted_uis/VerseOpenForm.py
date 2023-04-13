@@ -53,6 +53,7 @@ class Ui_VerseOpenForm(object):
         self.sourceTextCheckBox.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(16)
+        self.sourceTextCheckBox.setChecked(True)
         self.sourceTextCheckBox.setFont(font)
         self.sourceTextCheckBox.setTristate(False)
         self.sourceTextCheckBox.setObjectName("sourceTextCheckBox")
