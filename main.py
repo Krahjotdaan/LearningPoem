@@ -5,7 +5,9 @@ from converted_uis.LibraryForm import *
 from converted_uis.MethodologyForm import *
 from converted_uis.VerseCreationForm import *
 from converted_uis.VerseEditForm import *
-from converted_uis.VerseOpenForm import *
+from converted_uis.ExperimentalVerseOpenForm import *
+from methods.first_word import *
+from methods.first_and_last_word import *
 import sys
 
 
@@ -16,9 +18,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
     def new_verse_button_clicked(self):
-        self.close()
+        self.close()   
         self.verseCreationWindow = VerseCreationWindow()
-        self.verseCreationWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
+        self.verseCreationWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)      
         self.verseCreationWindow.show()
 
     def library_button_clicked(self):
@@ -66,6 +68,7 @@ class VerseCreationWindow(QtWidgets.QMainWindow):
         self.mainWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
         self.mainWindow.show()
         
+        
 
 class VerseEditWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -98,8 +101,26 @@ class VerseEditWindow(QtWidgets.QMainWindow):
 class VerseOpenWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(VerseOpenWindow, self).__init__()
-        self.ui = Ui_VerseOpenForm()
+        self.ui = Ui_ExperimentalVerseOpenForm()
         self.ui.setupUi(self)
+
+    def apply_button_clicked(self):
+        pass
+
+    def apply_button2_clicked(self):
+        pass
+
+    def apply_button3_clicked(self):
+        pass
+
+    def remove_filters_clicked(self):
+        pass
+
+    def remove_filters2_clicked(self):
+        pass
+
+    def remove_filters3_clicked(self):
+        pass
 
     def back_button_clicked(self):
         self.close()
@@ -133,6 +154,8 @@ class LibraryWindow(QtWidgets.QMainWindow):
 
                 self.verseOpenWindow.ui.titleAndAuthorLabel.setText(verse.text())
                 self.verseOpenWindow.ui.verseText.setText(vrstxt)
+                self.verseOpenWindow.ui.verseText_2.setText(first_word(vrstxt))
+                self.verseOpenWindow.ui.verseText_3.setText(first_and_last_word(vrstxt))
                 
                 self.verseOpenWindow.show()
                 

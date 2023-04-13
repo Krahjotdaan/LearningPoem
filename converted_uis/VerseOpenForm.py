@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_VerseOpenForm(object):
     def setupUi(self, VerseOpenForm):
         VerseOpenForm.setObjectName("VerseOpenForm")
-        VerseOpenForm.resize(420, 709)
+        VerseOpenForm.resize(420, 700)
         self.centralwidget = QtWidgets.QWidget(VerseOpenForm)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)

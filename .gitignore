@@ -1,3 +1,5 @@
 venv 
 .idea
 converted_uis/__pycache__
+__pycache__
+methods/__pycache__
