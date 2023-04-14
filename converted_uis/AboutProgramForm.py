@@ -138,7 +138,7 @@ class Ui_AboutProgramForm(object):
         _translate = QtCore.QCoreApplication.translate
         AboutProgramForm.setWindowTitle(_translate("AboutProgramForm", "MainWindow"))
         self.label.setText(_translate("AboutProgramForm", "Автор: Остапенко Артём"))
-        self.label_2.setText(_translate("AboutProgramForm", "Версия: 0.1"))
+        self.label_2.setText(_translate("AboutProgramForm", "Версия: 1.0"))
         self.textBrowser.setHtml(_translate("AboutProgramForm", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
