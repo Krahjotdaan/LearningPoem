@@ -5,9 +5,11 @@ from converted_uis.LibraryForm import *
 from converted_uis.MethodologyForm import *
 from converted_uis.VerseCreationForm import *
 from converted_uis.VerseEditForm import *
-from converted_uis.ExperimentalVerseOpenForm import *
+from converted_uis.VerseOpenForm import *
 from methods.first_word import *
 from methods.first_and_last_word import *
+from methods.quatrains import *
+from methods.lines import *
 import sys
 
 
@@ -75,7 +77,6 @@ class VerseEditWindow(QtWidgets.QMainWindow):
         super(VerseEditWindow, self).__init__()
         self.ui = Ui_VerseEditForm()
         self.ui.setupUi(self)   
-        print(str(self.ui.title.text()) + ', ' + str(self.ui.author.text()))
 
     def edit_button_clicked(self):
         if self.ui.title.text() is not None and self.ui.author.text() is not None and \
@@ -104,14 +105,65 @@ class VerseOpenWindow(QtWidgets.QMainWindow):
         self.ui = Ui_ExperimentalVerseOpenForm()
         self.ui.setupUi(self)
 
-    def apply_button_clicked(self):
-        pass
+    def apply_button_clicked(self):            
+        if self.ui.quatrains.text() == "" and self.ui.strings.text() != "":
+            tmp = lines(self.ui.vt, self.ui.strings.text())
+            self.ui.verseText.setText(tmp)
+            self.ui.vt = self.ui.VERSETEXT
+
+        if self.ui.strings.text() == "" and self.ui.quatrains.text() != "":
+            tmp = quatrains(self.ui.vt, self.ui.quatrains.text())
+            self.ui.verseText.setText(tmp)
+            self.ui.vt = self.ui.VERSETEXT
+
+        if self.ui.strings.text() != "" and self.ui.quatrains.text() != "":
+            tmp = lines(self.ui.vt, self.ui.strings.text())
+            tmp = quatrains(tmp, self.ui.quatrains.text())
+            self.ui.verseText.setText(tmp)
+            self.ui.vt = self.ui.VERSETEXT
+
+        if self.ui.strings.text() == "" and self.ui.quatrains.text() == "":
+            self.ui.verseText.setText(self.ui.vt)
 
     def apply_button2_clicked(self):
-        pass
+        if self.ui.quatrains_2.text() == "" and self.ui.strings_2.text() != "":
+            tmp = lines(self.ui.vt2, self.ui.strings_2.text())
+            self.ui.verseText_2.setText(tmp)
+            self.ui.vt2 = self.ui.VERSETEXT2
+
+        if self.ui.strings_2.text() == "" and self.ui.quatrains_2.text() != "":
+            tmp = quatrains(self.ui.vt2, self.ui.quatrains_2.text())
+            self.ui.verseText_2.setText(tmp)
+            self.ui.vt2 = self.ui.VERSETEXT2
+
+        if self.ui.strings_2.text() != "" and self.ui.quatrains_2.text() != "":
+            tmp = lines(self.ui.vt2, self.ui.strings_2.text())
+            tmp = quatrains(tmp, self.ui.quatrains_2.text())
+            self.ui.verseText_2.setText(tmp)
+            self.ui.vt2 = self.ui.VERSETEXT2
+
+        if self.ui.strings_2.text() == "" and self.ui.quatrains_2.text() == "":
+            self.ui.verseText_2.setText(self.ui.vt2)
 
     def apply_button3_clicked(self):
-        pass
+        if self.ui.quatrains_3.text() == "" and self.ui.strings_3.text() != "":
+            tmp = lines(self.ui.vt3, self.ui.strings_3.text())
+            self.ui.verseText_3.setText(tmp)
+            self.ui.vt3 = self.ui.VERSETEXT3
+
+        if self.ui.strings_3.text() == "" and self.ui.quatrains_3.text() != "":
+            tmp = quatrains(self.ui.vt3, self.ui.quatrains_3.text())
+            self.ui.verseText_3.setText(tmp)
+            self.ui.vt3 = self.ui.VERSETEXT3
+
+        if self.ui.strings_3.text() != "" and self.ui.quatrains_3.text() != "":
+            tmp = lines(self.ui.vt3, self.ui.strings_3.text())
+            tmp = quatrains(tmp, self.ui.quatrains_3.text())
+            self.ui.verseText_3.setText(tmp)
+            self.ui.vt3 = self.ui.VERSETEXT3
+
+        if self.ui.strings_3.text() == "" and self.ui.quatrains_3.text() == "":
+            self.ui.verseText_3.setText(self.ui.vt3)
 
     def remove_filters_clicked(self):
         pass
@@ -156,6 +208,12 @@ class LibraryWindow(QtWidgets.QMainWindow):
                 self.verseOpenWindow.ui.verseText.setText(vrstxt)
                 self.verseOpenWindow.ui.verseText_2.setText(first_word(vrstxt))
                 self.verseOpenWindow.ui.verseText_3.setText(first_and_last_word(vrstxt))
+                self.verseOpenWindow.ui.VERSETEXT = vrstxt
+                self.verseOpenWindow.ui.VERSETEXT2 = first_word(vrstxt)
+                self.verseOpenWindow.ui.VERSETEXT3 = first_and_last_word(vrstxt)
+                self.verseOpenWindow.ui.vt = vrstxt
+                self.verseOpenWindow.ui.vt2 = first_word(vrstxt)
+                self.verseOpenWindow.ui.vt3 = first_and_last_word(vrstxt)
                 
                 self.verseOpenWindow.show()
                 
