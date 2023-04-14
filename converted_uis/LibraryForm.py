@@ -157,7 +157,7 @@ class Ui_LibraryForm(object):
                 self.vbox.addWidget(verseRadioButton)
                 self.verses.append(verseRadioButton)
                 font = QtGui.QFont()
-                font.setPointSize(18)
+                font.setPointSize(16)
                 verseRadioButton.setFont(font)
                 verseRadioButton.resize(370, 40)
                 verseRadioButton.move(10, s * 40)

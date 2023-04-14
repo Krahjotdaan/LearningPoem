@@ -26,7 +26,7 @@ class Ui_ExperimentalVerseOpenForm(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.titleAndAuthorLabel = QtWidgets.QLabel(self.horizontalLayoutWidget)
         font = QtGui.QFont()
-        font.setPointSize(20)
+        font.setPointSize(16)
         self.titleAndAuthorLabel.setFont(font)
         self.titleAndAuthorLabel.setObjectName("titleAndAuthorLabel")
         self.horizontalLayout.addWidget(self.titleAndAuthorLabel)
