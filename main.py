@@ -105,74 +105,92 @@ class VerseOpenWindow(QtWidgets.QMainWindow):
         self.ui = Ui_ExperimentalVerseOpenForm()
         self.ui.setupUi(self)
 
-    def apply_button_clicked(self):            
-        if self.ui.quatrains.text() == "" and self.ui.strings.text() != "":
-            tmp = lines(self.ui.vt, self.ui.strings.text())
-            self.ui.verseText.setText(tmp)
-            self.ui.vt = self.ui.VERSETEXT
+    def apply_button_clicked(self): 
+        try:           
+            if self.ui.quatrains.text() == "" and self.ui.strings.text() != "":
+                tmp = lines(self.ui.vt, self.ui.strings.text())
+                self.ui.verseText.setText(tmp)
+                self.ui.vt = self.ui.VERSETEXT
 
-        if self.ui.strings.text() == "" and self.ui.quatrains.text() != "":
-            tmp = quatrains(self.ui.vt, self.ui.quatrains.text())
-            self.ui.verseText.setText(tmp)
-            self.ui.vt = self.ui.VERSETEXT
+            if self.ui.strings.text() == "" and self.ui.quatrains.text() != "":
+                tmp = quatrains(self.ui.vt, self.ui.quatrains.text())
+                self.ui.verseText.setText(tmp)
+                self.ui.vt = self.ui.VERSETEXT
 
-        if self.ui.strings.text() != "" and self.ui.quatrains.text() != "":
-            tmp = lines(self.ui.vt, self.ui.strings.text())
-            tmp = quatrains(tmp, self.ui.quatrains.text())
-            self.ui.verseText.setText(tmp)
-            self.ui.vt = self.ui.VERSETEXT
+            if self.ui.strings.text() != "" and self.ui.quatrains.text() != "":
+                tmp = lines(self.ui.vt, self.ui.strings.text())
+                tmp = quatrains(tmp, self.ui.quatrains.text())
+                self.ui.verseText.setText(tmp)
+                self.ui.vt = self.ui.VERSETEXT
 
-        if self.ui.strings.text() == "" and self.ui.quatrains.text() == "":
-            self.ui.verseText.setText(self.ui.vt)
+            if self.ui.strings.text() == "" and self.ui.quatrains.text() == "":
+                self.ui.verseText.setText(self.ui.vt)
+        
+        except ValueError:
+            pass
 
     def apply_button2_clicked(self):
-        if self.ui.quatrains_2.text() == "" and self.ui.strings_2.text() != "":
-            tmp = lines(self.ui.vt2, self.ui.strings_2.text())
-            self.ui.verseText_2.setText(tmp)
-            self.ui.vt2 = self.ui.VERSETEXT2
+        try:
+            if self.ui.quatrains_2.text() == "" and self.ui.strings_2.text() != "":
+                tmp = lines(self.ui.vt2, self.ui.strings_2.text())
+                self.ui.verseText_2.setText(tmp)
+                self.ui.vt2 = self.ui.VERSETEXT2
 
-        if self.ui.strings_2.text() == "" and self.ui.quatrains_2.text() != "":
-            tmp = quatrains(self.ui.vt2, self.ui.quatrains_2.text())
-            self.ui.verseText_2.setText(tmp)
-            self.ui.vt2 = self.ui.VERSETEXT2
+            if self.ui.strings_2.text() == "" and self.ui.quatrains_2.text() != "":
+                tmp = quatrains(self.ui.vt2, self.ui.quatrains_2.text())
+                self.ui.verseText_2.setText(tmp)
+                self.ui.vt2 = self.ui.VERSETEXT2
 
-        if self.ui.strings_2.text() != "" and self.ui.quatrains_2.text() != "":
-            tmp = lines(self.ui.vt2, self.ui.strings_2.text())
-            tmp = quatrains(tmp, self.ui.quatrains_2.text())
-            self.ui.verseText_2.setText(tmp)
-            self.ui.vt2 = self.ui.VERSETEXT2
+            if self.ui.strings_2.text() != "" and self.ui.quatrains_2.text() != "":
+                tmp = lines(self.ui.vt2, self.ui.strings_2.text())
+                tmp = quatrains(tmp, self.ui.quatrains_2.text())
+                self.ui.verseText_2.setText(tmp)
+                self.ui.vt2 = self.ui.VERSETEXT2
 
-        if self.ui.strings_2.text() == "" and self.ui.quatrains_2.text() == "":
-            self.ui.verseText_2.setText(self.ui.vt2)
+            if self.ui.strings_2.text() == "" and self.ui.quatrains_2.text() == "":
+                self.ui.verseText_2.setText(self.ui.vt2)
+
+        except ValueError:
+            pass
 
     def apply_button3_clicked(self):
-        if self.ui.quatrains_3.text() == "" and self.ui.strings_3.text() != "":
-            tmp = lines(self.ui.vt3, self.ui.strings_3.text())
-            self.ui.verseText_3.setText(tmp)
-            self.ui.vt3 = self.ui.VERSETEXT3
+        try:
+            if self.ui.quatrains_3.text() == "" and self.ui.strings_3.text() != "":
+                tmp = lines(self.ui.vt3, self.ui.strings_3.text())
+                self.ui.verseText_3.setText(tmp)
+                self.ui.vt3 = self.ui.VERSETEXT3
 
-        if self.ui.strings_3.text() == "" and self.ui.quatrains_3.text() != "":
-            tmp = quatrains(self.ui.vt3, self.ui.quatrains_3.text())
-            self.ui.verseText_3.setText(tmp)
-            self.ui.vt3 = self.ui.VERSETEXT3
+            if self.ui.strings_3.text() == "" and self.ui.quatrains_3.text() != "":
+                tmp = quatrains(self.ui.vt3, self.ui.quatrains_3.text())
+                self.ui.verseText_3.setText(tmp)
+                self.ui.vt3 = self.ui.VERSETEXT3
 
-        if self.ui.strings_3.text() != "" and self.ui.quatrains_3.text() != "":
-            tmp = lines(self.ui.vt3, self.ui.strings_3.text())
-            tmp = quatrains(tmp, self.ui.quatrains_3.text())
-            self.ui.verseText_3.setText(tmp)
-            self.ui.vt3 = self.ui.VERSETEXT3
+            if self.ui.strings_3.text() != "" and self.ui.quatrains_3.text() != "":
+                tmp = lines(self.ui.vt3, self.ui.strings_3.text())
+                tmp = quatrains(tmp, self.ui.quatrains_3.text())
+                self.ui.verseText_3.setText(tmp)
+                self.ui.vt3 = self.ui.VERSETEXT3
 
-        if self.ui.strings_3.text() == "" and self.ui.quatrains_3.text() == "":
-            self.ui.verseText_3.setText(self.ui.vt3)
+            if self.ui.strings_3.text() == "" and self.ui.quatrains_3.text() == "":
+                self.ui.verseText_3.setText(self.ui.vt3)
+
+        except ValueError:
+            pass
 
     def remove_filters_clicked(self):
-        pass
+        self.ui.verseText.setText(self.ui.vt)
+        self.ui.quatrains.setText("")
+        self.ui.strings.setText("")
 
     def remove_filters2_clicked(self):
-        pass
+        self.ui.verseText_2.setText(self.ui.vt2)
+        self.ui.quatrains_2.setText("")
+        self.ui.strings_2.setText("")
 
     def remove_filters3_clicked(self):
-        pass
+        self.ui.verseText_3.setText(self.ui.vt3)
+        self.ui.quatrains_3.setText("")
+        self.ui.strings_3.setText("")
 
     def back_button_clicked(self):
         self.close()

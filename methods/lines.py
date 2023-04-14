@@ -1,8 +1,8 @@
 def lines(text, lines):
     try:
-        if lines is not None:
-            text1 = list(filter(None, text.split('\n')))
-            lines1 = list(map(int, lines.split()))
+        lines1 = list(map(int, lines.split()))
+        if lines is not None and len(lines1) != 0:
+            text1 = list(filter(None, text.split('\n')))  
             lines1.sort()
             transformed_text = ""
             for i in range(len(text1)):

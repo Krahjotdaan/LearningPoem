@@ -1,8 +1,8 @@
 def quatrains(text, quatrains):
     try:
-        if quatrains is not None:
-            text1 = list(filter(None, text.split('\n')))
-            quatrains1 = list(map(int, quatrains.split()))
+        quatrains1 = list(map(int, quatrains.split()))
+        if quatrains is not None and len(quatrains1) != 0:
+            text1 = list(filter(None, text.split('\n')))  
             quatrains1.sort()
             transformed_text = ""
             try:
