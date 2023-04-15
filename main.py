@@ -85,8 +85,7 @@ class VerseEditWindow(QtWidgets.QMainWindow):
             os.rename(f"verses/{self.ui.filetitle}.txt", f"verses/{newFileTitle}.txt")
             with open(f"verses/{newFileTitle}.txt", "w") as fl:
                 fl.write(self.ui.verse_text.toPlainText())
-                
-                
+                    
         self.close()
         self.mainWindow = LibraryWindow()
         self.mainWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose, True)
