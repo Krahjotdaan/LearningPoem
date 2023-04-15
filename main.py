@@ -72,7 +72,6 @@ class VerseCreationWindow(QtWidgets.QMainWindow):
         self.mainWindow.show()
         
         
-
 class VerseEditWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(VerseEditWindow, self).__init__()
