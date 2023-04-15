@@ -1,3 +1,4 @@
+import os
 from PyQt5 import QtWidgets
 from converted_uis.MainWindow import *
 from converted_uis.AboutProgramForm import *
@@ -102,7 +103,7 @@ class VerseEditWindow(QtWidgets.QMainWindow):
 class VerseOpenWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(VerseOpenWindow, self).__init__()
-        self.ui = Ui_ExperimentalVerseOpenForm()
+        self.ui = Ui_VerseOpenForm()
         self.ui.setupUi(self)
 
     def apply_button_clicked(self): 

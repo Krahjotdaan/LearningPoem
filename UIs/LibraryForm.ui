@@ -95,14 +95,14 @@
      </layout>
     </item>
     <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,1,1">
+     <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="0,0,0">
       <property name="spacing">
        <number>10</number>
       </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QPushButton" name="deleteButton">
+         <widget class="QPushButton" name="openButton">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -115,7 +115,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Удалить</string>
+           <string>Открыть</string>
           </property>
          </widget>
         </item>
@@ -146,7 +146,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QPushButton" name="openButton">
+         <widget class="QPushButton" name="deleteButton">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -159,7 +159,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Открыть</string>
+           <string>Удалить</string>
           </property>
          </widget>
         </item>
