@@ -384,7 +384,7 @@ class Ui_VerseOpenForm(object):
         VerseOpenForm.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(VerseOpenForm)
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(VerseOpenForm)
 
     def retranslateUi(self, VerseOpenForm):
