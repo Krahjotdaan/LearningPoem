@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_VerseEditForm(object):
     def setupUi(self, VerseEditForm):
         VerseEditForm.setObjectName("VerseEditForm")
-        VerseEditForm.resize(420, 700)
+        VerseEditForm.resize(450, 800)
         self.centralwidget = QtWidgets.QWidget(VerseEditForm)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)

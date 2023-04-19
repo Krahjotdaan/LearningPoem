@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_VerseCreationForm(object):
     def setupUi(self, VerseCreationForm):
         VerseCreationForm.setObjectName("VerseCreationForm")
-        VerseCreationForm.resize(420, 700)
+        VerseCreationForm.resize(450, 800)
         self.centralwidget = QtWidgets.QWidget(VerseCreationForm)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)

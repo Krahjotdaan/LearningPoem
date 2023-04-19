@@ -15,7 +15,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_LibraryForm(object):
     def setupUi(self, LibraryForm):
         LibraryForm.setObjectName("LibraryForm")
-        LibraryForm.resize(420, 700)
+        LibraryForm.resize(450, 800)
         self.centralwidget = QtWidgets.QWidget(LibraryForm)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)

@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_AboutProgramForm(object):
     def setupUi(self, AboutProgramForm):
         AboutProgramForm.setObjectName("AboutProgramForm")
-        AboutProgramForm.resize(420, 700)
+        AboutProgramForm.resize(450, 800)
         self.centralwidget = QtWidgets.QWidget(AboutProgramForm)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
